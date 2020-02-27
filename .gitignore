@@ -1,0 +1,8 @@
+*.class
+*.xml
+*.iml
+Target
+.idea
+*.meta
+*.index
+*.pbtxt
