@@ -1,8 +1,9 @@
 *.class
 *.xml
 *.iml
+.gitignore
 Target
 .idea
-*.meta
-*.index
-*.pbtxt
+mydata/nltk_data
+Logs
+__pycache__
