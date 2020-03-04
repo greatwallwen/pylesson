@@ -1,5 +1,5 @@
 from pydeeplearn.basic_1_perceptron import Perceptron
-import matplotlib.pyplot as plt
+
 
 #定义激活函数f
 f = lambda x: x
@@ -36,17 +36,15 @@ def train_linear_unit():
 
 
 def plot(linear_unit):
-
+    import matplotlib.pyplot as plt
     input_vecs, labels = get_training_dataset()
     fig = plt.figure()
     ax = fig.add_subplot(111)
-
-    ax.scatter(list(map(lambda x: x[0], input_vecs)), labels)
-
+    ax.scatter(map(lambda x: x[0], input_vecs), labels)
     weights = linear_unit.weights
     bias = linear_unit.bias
     x = range(0,12,1)
-    y = list(map(lambda x:weights[0] * x + bias, x))
+    y = map(lambda x:weights[0] * x + bias, x)
     ax.plot(x, y)
     plt.show()
 
